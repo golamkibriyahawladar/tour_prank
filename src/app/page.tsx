@@ -191,7 +191,7 @@ export default function Home() {
   const travelerTitle = getTravelerTitle(selectedDistricts.size);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf7f2] dark:bg-zinc-950 text-foreground">
+    <div className="min-h-screen flex flex-col bg-[#faf7f2] text-foreground">
       {/* Top Navigation & Customization */}
       <Navbar
         activeTab={activeTab}
@@ -207,11 +207,11 @@ export default function Home() {
       />
 
       {/* Hero Banner */}
-      <section className="relative overflow-hidden py-10 px-4 sm:px-6 border-b border-border/60 bg-gradient-to-b from-white/90 to-[#faf7f2] dark:from-zinc-900/40 dark:to-zinc-950">
+      <section className="relative overflow-hidden py-10 px-4 sm:px-6 border-b border-border/60 bg-gradient-to-b from-white/90 to-[#faf7f2]">
         <div className="max-w-4xl mx-auto text-center">
           {activeTab === "bangladesh" && (
             <>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/80 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 mb-4 border border-emerald-200 dark:border-emerald-800">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/80 text-emerald-800 mb-4 border border-emerald-200">
                 <Compass className="w-3.5 h-3.5" />
                 ৬৪ জেলা · ৮ বিভাগ
               </div>
@@ -228,13 +228,13 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-xs sm:text-sm">
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-zinc-900 border border-border shadow-xs">
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-border shadow-xs">
                   <Map className="w-4 h-4 text-emerald-600" />
                   <span className="font-semibold text-muted-foreground">ঘুরেছেন:</span>
                   <span className="font-extrabold text-foreground">{toBanglaNum(selectedDistricts.size)} / ৬৪ জেলা</span>
                 </div>
 
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-zinc-900 border border-border shadow-xs">
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-border shadow-xs">
                   <Trophy className="w-4 h-4 text-amber-500" />
                   <span className="font-semibold text-muted-foreground">উপাধি:</span>
                   <span className="font-extrabold text-foreground">{travelerTitle.badge}</span>
@@ -245,7 +245,7 @@ export default function Home() {
 
           {activeTab === "canceled" && (
             <>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300 mb-4 border border-red-300 dark:border-red-800 animate-bounce">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 mb-4 border border-red-300 animate-bounce">
                 <Skull className="w-3.5 h-3.5" />
                 মিথ্যা প্রতিশ্রুতির মানচিত্র · বন্ধুদের ট্রল মোড 🔥
               </div>
@@ -265,7 +265,7 @@ export default function Home() {
 
           {activeTab === "world" && (
             <>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 mb-4 border border-blue-200 dark:border-blue-800">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800 mb-4 border border-blue-200">
                 <Globe className="w-3.5 h-3.5" />
                 ১৯৪ দেশ · ৬ মহাদেশ · গ্লোবাল ট্রাভেল
               </div>
@@ -371,11 +371,11 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-border/60 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xs py-5 px-4 sm:px-6 text-center text-xs text-muted-foreground">
+      <footer className="mt-auto border-t border-border/60 bg-white/80 backdrop-blur-xs py-5 px-4 sm:px-6 text-center text-xs text-muted-foreground">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <span className="font-semibold text-foreground">দেশ ঘুরি</span>
+          <span className="font-semibold text-foreground">Tour Plan</span>
           <span>•</span>
-          <span>ভ্রমণ ও পর্যটন মানচিত্র</span>
+          <span>ট্যুর প্ল্যান ও ভ্রমণ মানচিত্র</span>
         </div>
       </footer>
     </div>

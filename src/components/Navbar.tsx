@@ -76,10 +76,10 @@ export default function Navbar({
             </div>
             <div>
               <span className="text-xl font-extrabold tracking-tight text-foreground block leading-none">
-                দেশ ঘুরি
+                Tour Plan
               </span>
               <span className="text-[11px] font-medium text-muted-foreground">
-                আপনার ভ্রমণ মানচিত্র
+                ট্যুর প্ল্যান ও ভ্রমণ মানচিত্র
               </span>
             </div>
           </Link>
@@ -90,7 +90,7 @@ export default function Navbar({
               onClick={() => handleTabClick("bangladesh")}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 activeTab === "bangladesh"
-                  ? "bg-white dark:bg-zinc-800 text-foreground shadow-sm scale-[1.02]"
+                  ? "bg-white text-foreground shadow-sm scale-[1.02]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -103,7 +103,7 @@ export default function Navbar({
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 activeTab === "canceled"
                   ? "bg-red-600 text-white shadow-sm scale-[1.02]"
-                  : "text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40"
+                  : "text-red-600 hover:bg-red-50"
               }`}
             >
               <span>💔</span>
@@ -117,7 +117,7 @@ export default function Navbar({
               onClick={() => handleTabClick("world")}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 activeTab === "world"
-                  ? "bg-white dark:bg-zinc-800 text-foreground shadow-sm scale-[1.02]"
+                  ? "bg-white text-foreground shadow-sm scale-[1.02]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -197,7 +197,7 @@ export default function Navbar({
                 onClick={() => setShowLabels(!showLabels)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border transition ${
                   showLabels
-                    ? "bg-emerald-50 dark:bg-emerald-950 border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 font-bold"
+                    ? "bg-emerald-50 border-emerald-300 text-emerald-800 font-bold"
                     : "bg-muted/30 border-border text-muted-foreground font-medium hover:bg-muted/60"
                 }`}
               >
@@ -207,7 +207,7 @@ export default function Navbar({
             </div>
           </div>
         ) : (
-          <div className="mt-2.5 pt-2 border-t border-border/60 flex items-center justify-between text-xs text-red-600 dark:text-red-400 font-medium">
+          <div className="mt-2.5 pt-2 border-t border-border/60 flex items-center justify-between text-xs text-red-600 font-medium">
             <span className="flex items-center gap-1.5">
               <span>🚨</span>
               <span>দোস্তদের ট্রল করুন: যেসব ট্যুরের কথা দিয়ে বন্ধুদের জন্য যাওয়া হয়নি, সেগুলো বের করুন!</span>

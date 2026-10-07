@@ -7,15 +7,15 @@ import { Download, Sparkles, Share2, Check, RefreshCw } from "lucide-react";
 import QRCode from "qrcode";
 
 // ============================================================================
-// 🔗 DEVELOPER SCANNER REDIRECT URL (ভ্যারিয়েবল)
-// কিউআর কোড স্ক্যান করলে যে লিংক ওপেন হবে তা নিচে পরিবর্তন করতে পারবেন:
+// 🔗 LIVE SCANNER REDIRECT URL (ভ্যারিয়েবল)
+// কিউআর কোড স্ক্যান করলে যে লিংক ওপেন হবে:
 // ============================================================================
-export const DEVELOPER_SCAN_URL = "https://github.com/golamkibriyahawladar";
+export const DEVELOPER_SCAN_URL = "https://tour-prank.vercel.app/cancel";
 
 let qrModulesCache: { size: number; get: (r: number, c: number) => number } | null = null;
 try {
   qrModulesCache = QRCode.create(DEVELOPER_SCAN_URL, { errorCorrectionLevel: "M" }).modules as any;
-} catch (e) {}
+} catch (e) { }
 
 interface Props {
   canceledDistricts: Set<string>;
@@ -366,7 +366,7 @@ export default function CanceledTourMap({
     ctx.fillText("★ গণপ্রজাতন্ত্রী বাংলাদেশ ফ্রেন্ডশিপ দলিল • মূল প্রজেক্ট জলছাপ ★", wmX, wmY - 148);
 
     ctx.font = "bold 11.5px monospace, sans-serif";
-    ctx.fillText("🔒 OFFICIAL VERIFIED DEVELOPER QR WATERMARK", wmX, wmY - 124);
+    ctx.fillText("🔒 OFFICIAL TOUR PRANK QR WATERMARK", wmX, wmY - 124);
 
     // Center: BIG FAINT DEVELOPER QR CODE (জলছাপের ভেতরে বড় আকারের কিউআর)
     const qrSize = 145; // সাইজে বড় (145x145 px)
@@ -389,10 +389,10 @@ export default function CanceledTourMap({
     // Bottom Watermark Subtitle
     ctx.fillStyle = wmText;
     ctx.font = "bold 14px 'Anek Bangla', 'Hind Siliguri', sans-serif";
-    ctx.fillText("দেশ ঘুরি • মূল ডেভেলপার: golamkibriyahawladar", wmX, wmY + 118);
+    ctx.fillText("Tour Plan • ট্যুর প্র্যাঙ্ক • tour-prank.vercel.app", wmX, wmY + 118);
 
     ctx.font = "bold 11px monospace, sans-serif";
-    ctx.fillText("★ github.com/golamkibriyahawladar ★", wmX, wmY + 140);
+    ctx.fillText("★ tour-prank.vercel.app ★", wmX, wmY + 140);
 
     ctx.restore();
 
@@ -445,7 +445,7 @@ export default function CanceledTourMap({
 
     ctx.fillStyle = "#64748b";
     ctx.font = "600 8px monospace, sans-serif";
-    ctx.fillText("DEV PROJECT", scanBoxX + scanBoxW / 2, scanBoxY + 19);
+    ctx.fillText("TOUR PRANK", scanBoxX + scanBoxW / 2, scanBoxY + 19);
 
     // Crisp high-contrast QR Code for fast mobile scanning
     const smallQrSize = 64;
@@ -478,8 +478,8 @@ export default function CanceledTourMap({
     ctx.fillText("★ প্রজেক্ট লিংক ★", scanBoxX + scanBoxW / 2, scanBoxY + 100);
 
     ctx.fillStyle = "#64748b";
-    ctx.font = "600 7.5px monospace, sans-serif";
-    ctx.fillText("golamkibriya...", scanBoxX + scanBoxW / 2, scanBoxY + 110);
+    ctx.font = "600 7px monospace, sans-serif";
+    ctx.fillText("tour-prank.vercel...", scanBoxX + scanBoxW / 2, scanBoxY + 110);
 
     ctx.restore();
 
@@ -562,7 +562,7 @@ export default function CanceledTourMap({
     ctx.fillStyle = "#94a3b8";
     ctx.font = "500 12px system-ui, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("দেশ ঘুরি • deshghuri.app • এই দলিলের বিরুদ্ধে কোনো আপিল গ্রহণযোগ্য নয়", BASE_WIDTH / 2, BASE_HEIGHT - 40);
+    ctx.fillText("Tour Plan • tour-prank.vercel.app • এই দলিলের বিরুদ্ধে কোনো আপিল গ্রহণযোগ্য নয়", BASE_WIDTH / 2, BASE_HEIGHT - 40);
 
     ctx.restore();
   };

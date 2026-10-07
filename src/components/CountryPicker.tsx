@@ -33,13 +33,13 @@ export default function CountryPicker({
   }, [search]);
 
   return (
-    <div className="bg-white dark:bg-zinc-900 border border-border rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
+    <div className="bg-white border border-border rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
       <div className="flex items-center justify-between pb-3 border-b border-border">
         <div>
           <h2 className="text-lg font-bold text-foreground">যেসব দেশে গিয়েছি</h2>
           <p className="text-xs text-muted-foreground mt-0.5">দেশ নির্বাচন করুন</p>
         </div>
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-50 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-50 text-blue-800 border border-blue-200">
           <span>{toBanglaNum(selectedCountries.size)}</span>
           <span>/</span>
           <span>১৯৪</span>
@@ -84,7 +84,7 @@ export default function CountryPicker({
 
           return (
             <div key={cont.key} className="space-y-2">
-              <div className="flex items-center justify-between sticky top-0 bg-white/95 dark:bg-zinc-900/95 py-1 z-10 backdrop-blur-sm">
+              <div className="flex items-center justify-between sticky top-0 bg-white/95 py-1 z-10 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-foreground">
                     {cont.nameBn}

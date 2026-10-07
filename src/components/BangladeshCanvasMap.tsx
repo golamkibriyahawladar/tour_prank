@@ -337,7 +337,7 @@ export default function BangladeshCanvasMap({
     ctx.fillStyle = theme.muted;
     ctx.font = "600 14px system-ui, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("দেশ ঘুরি • deshghuri.app", BASE_WIDTH / 2, BASE_HEIGHT - 22);
+    ctx.fillText("Tour Plan • tour-prank.vercel.app", BASE_WIDTH / 2, BASE_HEIGHT - 22);
 
     ctx.restore();
   };
@@ -443,7 +443,7 @@ export default function BangladeshCanvasMap({
           sctx.fillStyle = theme.ink;
           sctx.font = "bold 56px 'Anek Bangla', sans-serif";
           sctx.textAlign = "center";
-          sctx.fillText("আপনার বাংলাদেশ ভ্রমণ ম্যাপ তৈরি করুন: deshghuri.app", 1080, 3700);
+          sctx.fillText("আপনার বাংলাদেশ ভ্রমণ ম্যাপ তৈরি করুন: tour-prank.vercel.app", 1080, 3700);
 
           const link = document.createElement("a");
           link.download = `amar-bangladesh-story-${Date.now()}.png`;
@@ -549,7 +549,7 @@ export default function BangladeshCanvasMap({
   <rect x="${BASE_WIDTH - 240}" y="${footerY + 16}" width="190" height="42" rx="21" fill="${theme.v1}20"/>
   <text x="${BASE_WIDTH - 145}" y="${footerY + 42}" text-anchor="middle" fill="${theme.v1}" font-size="16" font-weight="bold">🏆 ${travelerInfo.badge}</text>
 
-  <text x="${BASE_WIDTH / 2}" y="${BASE_HEIGHT - 22}" text-anchor="middle" fill="${theme.muted}" font-size="14">দেশ ঘুরি • deshghuri.app</text>
+  <text x="${BASE_WIDTH / 2}" y="${BASE_HEIGHT - 22}" text-anchor="middle" fill="${theme.muted}" font-size="14">Tour Plan • tour-prank.vercel.app</text>
 </svg>`;
 
       const blob = new Blob([svgContent], { type: "image/svg+xml;charset=utf-8" });

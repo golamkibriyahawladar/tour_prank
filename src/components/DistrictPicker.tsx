@@ -37,14 +37,14 @@ export default function DistrictPicker({
   }, [search]);
 
   return (
-    <div className="bg-white dark:bg-zinc-900 border border-border rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
+    <div className="bg-white border border-border rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
       {/* Header */}
       <div className="flex items-center justify-between pb-3 border-b border-border">
         <div>
           <h2 className="text-lg font-bold text-foreground">যেসব জেলায় গিয়েছি</h2>
           <p className="text-xs text-muted-foreground mt-0.5">ক্লিক করে জেলা চিহ্নিত করুন</p>
         </div>
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-50 text-emerald-800 border border-emerald-200">
           <span>{toBanglaNum(selectedDistricts.size)}</span>
           <span>/</span>
           <span>৬৪</span>
@@ -75,7 +75,7 @@ export default function DistrictPicker({
       <div className="flex items-center justify-between text-xs py-1.5 mb-2 px-1">
         <button
           onClick={onSelectAll}
-          className="text-emerald-700 dark:text-emerald-400 hover:underline font-semibold flex items-center gap-1"
+          className="text-emerald-700 hover:underline font-semibold flex items-center gap-1"
         >
           <CheckSquare className="w-3.5 h-3.5" /> সব বাছাই করুন
         </button>
@@ -99,7 +99,7 @@ export default function DistrictPicker({
 
           return (
             <div key={div.key} className="space-y-2">
-              <div className="flex items-center justify-between sticky top-0 bg-white/95 dark:bg-zinc-900/95 py-1 z-10 backdrop-blur-sm">
+              <div className="flex items-center justify-between sticky top-0 bg-white/95 py-1 z-10 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-foreground">
                     {div.nameBn} বিভাগ

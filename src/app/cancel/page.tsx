@@ -86,7 +86,7 @@ export default function CancelPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf7f2] dark:bg-zinc-950 text-foreground">
+    <div className="min-h-screen flex flex-col bg-[#faf7f2] text-foreground">
       {/* Top Navigation */}
       <Navbar
         activeTab="canceled"
@@ -102,9 +102,9 @@ export default function CancelPage() {
       />
 
       {/* Hero Banner for Canceled Tour */}
-      <section className="relative overflow-hidden py-10 px-4 sm:px-6 border-b border-border/60 bg-gradient-to-b from-white/90 to-[#faf7f2] dark:from-zinc-900/40 dark:to-zinc-950">
+      <section className="relative overflow-hidden py-10 px-4 sm:px-6 border-b border-border/60 bg-gradient-to-b from-white/90 to-[#faf7f2]">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300 mb-4 border border-red-300 dark:border-red-800 animate-bounce">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 mb-4 border border-red-300 animate-bounce">
             <Skull className="w-3.5 h-3.5" />
             মিথ্যা প্রতিশ্রুতির মানচিত্র · বন্ধুদের ট্রল মোড 🔥
           </div>
@@ -162,11 +162,11 @@ export default function CancelPage() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-border/60 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xs py-5 px-4 sm:px-6 text-center text-xs text-muted-foreground">
+      <footer className="mt-auto border-t border-border/60 bg-white/80 backdrop-blur-xs py-5 px-4 sm:px-6 text-center text-xs text-muted-foreground">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <span className="font-semibold text-foreground">দেশ ঘুরি</span>
+          <span className="font-semibold text-foreground">Tour Plan</span>
           <span>•</span>
-          <span>ভ্রমণ ও পর্যটন মানচিত্র</span>
+          <span>ট্যুর প্ল্যান ও ভ্রমণ মানচিত্র</span>
         </div>
       </footer>
     </div>

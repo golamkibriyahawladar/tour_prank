@@ -65,17 +65,17 @@ export default function CanceledTourPicker({
   };
 
   return (
-    <div className="bg-white dark:bg-zinc-900 border border-red-200 dark:border-red-950/60 rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
+    <div className="bg-white border border-red-200 rounded-2xl p-5 shadow-sm flex flex-col h-[740px]">
       {/* Header */}
       <div className="flex items-center justify-between pb-3 border-b border-border">
         <div>
-          <h2 className="text-lg font-bold text-red-600 dark:text-red-400 flex items-center gap-1.5">
+          <h2 className="text-lg font-bold text-red-600 flex items-center gap-1.5">
             <AlertTriangle className="w-5 h-5 text-red-600" />
             <span>ক্যান্সেল ট্যুরের হিসাব</span>
           </h2>
           <p className="text-xs text-muted-foreground mt-0.5">যেখানে যাওয়ার কথা ছিল কিন্তু দোস্তরা ধোঁকা দিল</p>
         </div>
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-300 border border-red-200 dark:border-red-800">
+        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-red-50 text-red-800 border border-red-200">
           <span>{toBanglaNum(canceledDistricts.size)}</span>
           <span>টি বাতিল</span>
         </div>
@@ -90,7 +90,7 @@ export default function CanceledTourPicker({
               <button
                 key={preset.name}
                 onClick={() => onSelectPreset(preset.districts)}
-                className="text-xs px-2.5 py-1.5 rounded-xl bg-red-50 dark:bg-red-950/50 hover:bg-red-100 dark:hover:bg-red-900/40 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800/60 font-semibold transition active:scale-95 flex items-center gap-1"
+                className="text-xs px-2.5 py-1.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-800 border border-red-200 font-semibold transition active:scale-95 flex items-center gap-1"
               >
                 <span>💔</span>
                 <span>{preset.name}</span>
@@ -116,7 +116,7 @@ export default function CanceledTourPicker({
           </div>
 
           <div>
-            <label className="text-xs font-bold text-red-600 dark:text-red-400 flex items-center gap-1 mb-1">
+            <label className="text-xs font-bold text-red-600 flex items-center gap-1 mb-1">
               <Skull className="w-3.5 h-3.5" />
               <span>কালপ্রিট দোস্তদের নাম (কার কার জন্য ক্যান্সেল হলো):</span>
             </label>
@@ -125,15 +125,15 @@ export default function CanceledTourPicker({
               value={culpritFriends}
               onChange={(e) => setCulpritFriends(e.target.value)}
               placeholder="যেমন: তানভীর, আকাশ, রাফি"
-              className="w-full px-3 py-1.5 text-xs rounded-lg border border-red-300 dark:border-red-800 bg-background focus:outline-none focus:ring-1 focus:ring-red-500"
+              className="w-full px-3 py-1.5 text-xs rounded-lg border border-red-300 bg-background focus:outline-none focus:ring-1 focus:ring-red-500"
             />
           </div>
         </div>
 
         {/* Dialogue System: Dropdown + Custom Field + Randomize Button */}
-        <div className="bg-amber-50/50 dark:bg-amber-950/20 p-3 rounded-xl border border-amber-200 dark:border-amber-900/50 space-y-2">
+        <div className="bg-amber-50/50 p-3 rounded-xl border border-amber-200 space-y-2">
           <div className="flex items-center justify-between">
-            <label className="text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1">
+            <label className="text-xs font-bold text-amber-900 flex items-center gap-1">
               <MessageSquareQuote className="w-4 h-4 text-amber-600" />
               <span>পোস্টারের পাঞ্চলাইন / ডায়ালগ:</span>
             </label>
@@ -142,7 +142,7 @@ export default function CanceledTourPicker({
                 setIsCustomDialogue(false);
                 onRandomizeQuote();
               }}
-              className="text-[11px] font-bold text-amber-700 dark:text-amber-400 hover:underline flex items-center gap-1 bg-amber-100 dark:bg-amber-900/60 px-2 py-0.5 rounded-full transition"
+              className="text-[11px] font-bold text-amber-700 hover:underline flex items-center gap-1 bg-amber-100 px-2 py-0.5 rounded-full transition"
               title="এলোমেলো ডায়ালগ আনুন"
             >
               <Dices className="w-3.5 h-3.5" />
@@ -171,14 +171,14 @@ export default function CanceledTourPicker({
               value={dialogueText}
               onChange={(e) => setDialogueText(e.target.value)}
               placeholder="আপনার বন্ধুদের উদ্দেশ্যে নিজের ডায়ালগ বা ট্রল লিখুন..."
-              className="w-full px-2.5 py-1.5 text-xs rounded-lg border border-amber-300 dark:border-amber-800 bg-background focus:outline-none focus:ring-1 focus:ring-amber-500 font-medium resize-none"
+              className="w-full px-2.5 py-1.5 text-xs rounded-lg border border-amber-300 bg-background focus:outline-none focus:ring-1 focus:ring-amber-500 font-medium resize-none"
             />
           )}
         </div>
 
         {/* Punishment Selector */}
-        <div className="bg-red-50/40 dark:bg-red-950/20 p-3 rounded-xl border border-red-200 dark:border-red-900/40 space-y-1.5">
-          <label className="text-xs font-bold text-red-900 dark:text-red-300 flex items-center gap-1">
+        <div className="bg-red-50/40 p-3 rounded-xl border border-red-200 space-y-1.5">
+          <label className="text-xs font-bold text-red-900 flex items-center gap-1">
             <Gavel className="w-3.5 h-3.5 text-red-600" />
             <span>কালপ্রিটদের শাস্তি নির্ধারণ:</span>
           </label>

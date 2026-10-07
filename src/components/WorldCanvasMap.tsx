@@ -353,7 +353,7 @@ export default function WorldCanvasMap({
     ctx.fillStyle = theme.muted;
     ctx.font = "600 14px system-ui, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("দেশ ঘুরি • deshghuri.app", BASE_WIDTH / 2, BASE_HEIGHT - 22);
+    ctx.fillText("Tour Plan • tour-prank.vercel.app", BASE_WIDTH / 2, BASE_HEIGHT - 22);
 
     ctx.restore();
   };
@@ -521,7 +521,7 @@ export default function WorldCanvasMap({
   <text x="50" y="${footerY + 36}" fill="${theme.ink}" font-size="18" font-weight="bold">বিশ্বের ${toBanglaNum(percentage)}% দেশ ঘোরা হয়েছে</text>
   <text x="50" y="${footerY + 58}" fill="${theme.muted}" font-size="15">${toBanglaNum(count)}টি দেশ • ৬টি মহাদেশের মধ্যে</text>
 
-  <text x="${BASE_WIDTH / 2}" y="${BASE_HEIGHT - 22}" text-anchor="middle" fill="${theme.muted}" font-size="14">দেশ ঘুরি • deshghuri.app</text>
+  <text x="${BASE_WIDTH / 2}" y="${BASE_HEIGHT - 22}" text-anchor="middle" fill="${theme.muted}" font-size="14">Tour Plan • tour-prank.vercel.app</text>
 </svg>`;
 
       const blob = new Blob([svgContent], { type: "image/svg+xml;charset=utf-8" });
