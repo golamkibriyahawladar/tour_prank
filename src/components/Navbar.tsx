@@ -108,9 +108,6 @@ export default function Navbar({
             >
               <span>💔</span>
               <span>ক্যান্সেল ট্যুর</span>
-              <span className="text-[10px] bg-red-800 text-white px-1.5 py-0.5 rounded-full uppercase tracking-wider font-extrabold">
-                Meme
-              </span>
             </button>
 
             <button
